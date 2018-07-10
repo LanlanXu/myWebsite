@@ -14,3 +14,6 @@
 > 2. 项目页面编译：webpack --watch 开发时即时编译至指定文件夹，供node服务器访问
 > 3. 项目服务器运行：nodemon app.js 即时监听服务器代码修改并重新启动服务器
 > 4. 第2、第3步目前需要同时运行，后期配置到package.json中，直接一起运行
+
+目前效果如下：
+![index](https://github.com/LanlanXu/myWebsite/blob/master/index.gif "index")
