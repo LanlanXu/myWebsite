@@ -24,10 +24,8 @@
       </div>
       <div class="main-btn" @click="register">注册并登录</div>
     </div>
-    <div class="links">
-      <router-link :to="{ name: 'login'}">
+    <div class="links" @click="toLogin">
         有账号？直接登录
-      </router-link>
     </div>
   </div>
 </template>
@@ -80,6 +78,9 @@ export default {
     }
   },
   methods: {
+    toLogin () {
+      this.$emit('toLogin')
+    },
     getMsg () {
       if (!this.validate('phone')) return
       // 获取验证码接口

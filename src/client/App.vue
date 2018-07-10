@@ -61,13 +61,13 @@ input {
 
 @media screen and (max-width:720px) {
   html {
-    // font-size: 12px !important;
+    font-size: 12px;
   }
 }
 
 @media screen and (min-width:720px) {
   html {
-    // font-size: 12px !important;
+    font-size: 12px;
   }
   .landing,
   .links {
@@ -160,11 +160,8 @@ input {
   margin: 0 auto;
   text-align: right;
   line-height: 3.2rem;
-  a {
-    padding: 0 1rem;
-    color: #fff;
-    text-decoration: none;
-  }
+  padding: 0 1rem;
+  color: #fff;
 }
 
 .default-input {

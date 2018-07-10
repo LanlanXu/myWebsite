@@ -15,10 +15,8 @@
       </div>
       <div class="main-btn" @click="login">登录</div>
     </div>
-    <div class="links">
-      <router-link :to="{ name: 'register'}">
+    <div class="links" @click="toRegister">
         新用户注册
-      </router-link>
     </div>
   </div>
 </template>
@@ -49,6 +47,9 @@ export default {
     }
   },
   methods: {
+    toRegister () {
+      this.$emit('toRegister')
+    },
     login () {
       let _this = this
       if (!this.validate()) return
