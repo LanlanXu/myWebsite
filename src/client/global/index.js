@@ -17,14 +17,13 @@ Vue.component('error-msg', {
   methods: {
     loadErrorMsg () {
       clearInterval(this.msgTimer)
-      let _this = this
       this.msgSec = this.errorDefaultSec
       this.errorMsg = this.msg
-      this.msgTimer = setInterval(function () {
-        if (!_this.msgSec) {
-          clearInterval(_this.msgTimer)
+      this.msgTimer = setInterval(() =>{
+        if (!this.msgSec) {
+          clearInterval(this.msgTimer)
         } else {
-          _this.msgSec--
+          this.msgSec--
         }
       }, 1000)
     }
@@ -73,14 +72,9 @@ Vue.component('i-input', {
   // 选项
   template: `<div class="default-input">
               <input :type="inputType?inputType:'text'" :placeholder="place" v-model="form[str]" @input="closeDis(str)" @focus="closeDis(str)" @blur="closeHid(str)">
-              <img class="close" v-if="deleteBoolArr[str]" @click="deleteCont(str)" :src="closeSrc" alt="">
+              <i class="fa fa-times close" v-if="deleteBoolArr[str]" @click="deleteCont(str)"></i>
             </div>`,
   props: ['form', 'deleteBoolArr', 'str', 'place', 'addclass', 'inputType'],
-  data () {
-    return {
-      closeSrc: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAg0lEQVQ4T2NkoBJgpJI5DDQzyAHoQgEg3kDApQFA+Q9AfACmDt1FIAXrgTgRiBfgMCwBKD4fiAORLcTmNZhCbIbhlMMVRtg04LMAb2AjawT5EuQdnF4mFGsww0AG4Qs3gtFPFYOo4jWqBDZVop9qCZKULAKKSXhWIhT9BLIcQnrwGQQALcAnE+7aBYwAAAAASUVORK5CYII='
-    }
-  },
   methods: {
     closeDis (str) {
       this.deleteBoolArr[str] = !!this.form[str]

@@ -138,6 +138,7 @@ input {
         width: 1.2rem;
         height: 1.2rem;
         vertical-align: middle;
+        font-size: 1.1rem;
       }
     }
   }
