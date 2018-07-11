@@ -20,64 +20,88 @@
                 <div class="wrapper" ref="wrapper">
                     <ul>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容,内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容,内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                         <li>
-                            <h1>内容标题</h1>
-                            <p>内容内容内容内容内容内容内容内容。。。。</p>
-                            <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            <router-link to="/article">
+                                <h1>内容标题</h1>
+                                <p>内容内容内容内容内容内容内容内容。。。。</p>
+                                <div class="meta"><i class="fa fa-clock-o"></i><span class="text">2018-08-01</span></div>
+                            </router-link>
                         </li>
                     </ul>
                 </div>
@@ -155,7 +179,8 @@ export default {
 
         .left-bar{
             width: $bar-width; 
-            height: 100vh; 
+            height: 100vh;
+            background: $bg-color;
             position: absolute; 
             top: 0;
 
@@ -248,6 +273,7 @@ export default {
                             font-size: 18px;
                             line-height: 25px;
                             margin-top: 6px;
+                            color: #000;
                         }
 
                         p{
