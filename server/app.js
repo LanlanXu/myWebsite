@@ -11,22 +11,16 @@ function resolve(dir){
     return path.join(__dirname, dir)
 }
 
-app.use(express.static(resolve('src/server')));
-app.use(express.static(resolve('src/server/public')));
-app.use(express.static(resolve('src/server/static')));
-app.use(express.static(resolve('src/server/fonts')));
+app.use(express.static(resolve('../webapp/public')));
+app.use(express.static(resolve('../webapp/static')));
+app.use(express.static(resolve('../webapp/fonts')));
 
-app.use('*', function(req, res, next){
-    next();
-});
+// app.use('*', function(req, res, next){
+//     next();
+// });
 
-var result = {
-    status: '200',
-    msg: 'success',
-    success: true
-};
 
-var UsersModel = require(resolve('api/user'));
+var UsersModel = require(resolve('model/user'));
 
 app.post('/api/login', jsonParser, function(req, res){
     UsersModel.find({phone: new RegExp(req.body.phone)}, function(err, docs){
@@ -37,6 +31,7 @@ app.post('/api/login', jsonParser, function(req, res){
                 res.json(result);
             } else {
                 result.data = docs;
+                result.msg = '登录成功';
                 res.json(result);
             }
             

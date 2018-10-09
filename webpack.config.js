@@ -8,16 +8,16 @@ function resolve (dir) {
 }
 
 module.exports = {
-    entry: __dirname + '/src/client/main.js', // 入口文件，main.js开始，把所有相关文件抓取，编译，输出到bundle.js中
+    entry: __dirname + '/src/main.js', // 入口文件，main.js开始，把所有相关文件抓取，编译，输出到bundle.js中
     output: {
-        path: resolve('src/server/public'),
+        path: resolve('webapp/public'),
         filename: 'bundle.[hash].js',
         publicPath: ''
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'], // 默认扩展名
         alias: {
-        '@': resolve('src/client'),  // 设置路径别名
+        '@': resolve('src'),  // 设置路径别名
         }
     },
     externals: {
@@ -52,10 +52,10 @@ module.exports = {
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'src/client/index.html',
+            template: 'src/index.html',
         }),
         new CleanWebpackPlugin(
-            [resolve('src/server/public')],
+            [resolve('webapp/public')],
             {
                 watch: true, // 一旦重新编译时，都会重新删除一次文件
                 exclude: ['static'] // 排除需要删除的文件（有些文件不需要删除）
