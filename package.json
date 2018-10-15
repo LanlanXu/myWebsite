@@ -4,7 +4,7 @@
   "description": "pratice",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "web": "webpack --watch",
+    "web": "webpack --watch src/webpack.config.js",
     "server": "nodemon server/app.js",
     "dev": "concurrently \"npm run web\" \"npm run server\""
   },
