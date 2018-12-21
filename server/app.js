@@ -3,15 +3,16 @@ var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
 var bodyParser = require('body-parser');
+var result = require('./config/index');
 
 var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-function resolve(dir){
+function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-app.use(express.static(resolve('../webapp/public')));
+app.use(express.static(resolve('../webapp')));
 app.use(express.static(resolve('../webapp/static')));
 app.use(express.static(resolve('../webapp/fonts')));
 
@@ -19,13 +20,13 @@ app.use(express.static(resolve('../webapp/fonts')));
 //     next();
 // });
 
-
 var UsersModel = require(resolve('model/user'));
 
-app.post('/api/login', jsonParser, function(req, res){
-    UsersModel.find({phone: new RegExp(req.body.phone)}, function(err, docs){
-        if(!err) {
-            if(!docs.length) {
+app.post('/api/login', jsonParser, function (req, res) {
+    console.log(req.body.phone);
+    UsersModel.find({ phone: new RegExp(req.body.phone) }, function (err, docs) {
+        if (!err) {
+            if (!docs.length) {
                 result.success = false;
                 result.msg = '该手机号还未注册';
                 res.json(result);
@@ -34,20 +35,20 @@ app.post('/api/login', jsonParser, function(req, res){
                 result.msg = '登录成功';
                 res.json(result);
             }
-            
+
         }
     });
 });
 
-app.post('/api/register', jsonParser, function(req, res){
-    UsersModel.find({phone: new RegExp(req.body.phone)}, function(err, docs){
-        if(!err) {
-            if(!docs.length) {
+app.post('/api/register', jsonParser, function (req, res) {
+    UsersModel.find({ phone: new RegExp(req.body.phone) }, function (err, docs) {
+        if (!err) {
+            if (!docs.length) {
                 var user = new UsersModel({
                     phone: req.body.phone,
                     password: req.body.password
                 });
-                user.save(function(err, doc){
+                user.save(function (err, doc) {
                     result.msg = '注册成功，请登录';
                     res.json(result);
                 });
@@ -56,7 +57,7 @@ app.post('/api/register', jsonParser, function(req, res){
                 result.msg = '该手机号已注册，请直接登录';
                 res.json(result);
             }
-            
+
         }
     });
 });
@@ -64,11 +65,11 @@ app.post('/api/register', jsonParser, function(req, res){
 
 
 
-mongoose.connect('mongodb://localhost:27017/test', function(err){
-    if(err){
-        console.log(err,'数据库连接失败');
+mongoose.connect('mongodb://localhost:27017/test', function (err) {
+    if (err) {
+        console.log(err, '数据库连接失败');
     } else {
         console.log('数据库连接成功');
-        app.listen(3000);
+        app.listen(3300);
     }
 });

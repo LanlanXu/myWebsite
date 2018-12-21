@@ -5,7 +5,7 @@
       <div class="title">登录</div>
       <div class="login">
         <div class="item">
-          <label>手机号</label>
+          <label>手机号1</label>
           <i-input :form="form" :deleteBoolArr="deleteBoolArr" str="phone" place="请输入用户名"></i-input>
         </div>
         <div class="item">
@@ -16,7 +16,7 @@
       <div class="main-btn" @click="login">登录</div>
     </div>
     <div class="links" @click="toRegister">
-        新用户注册
+      新用户注册
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@
 <script>
 export default {
   name: 'login',
-  data () {
+  data() {
     return {
       form: {
         phone: '',
@@ -47,10 +47,10 @@ export default {
     }
   },
   methods: {
-    toRegister () {
+    toRegister() {
       this.$emit('toRegister')
     },
-    login () {
+    login() {
       let _this = this
       if (!this.validate()) return
       this.validate()
@@ -58,13 +58,13 @@ export default {
       this.$XHRpost('api/login', {
         phone: this.form.phone,
         password: this.form.pwd
-      }, function (data) {
+      }, function(data) {
         _this.errorMsg(data.msg)
         if (data.success) {
           // 储存用户名和密码
           // 跳转
         }
-        
+
       })
     }
   }

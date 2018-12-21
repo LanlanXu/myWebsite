@@ -4,7 +4,7 @@
   "description": "pratice",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "web": "webpack --watch src/webpack.config.js",
+    "web": "webpack --watch --mode=development --config src/webpack.config.js",
     "server": "nodemon server/app.js",
     "dev": "concurrently \"npm run web\" \"npm run server\""
   },
@@ -16,7 +16,10 @@
     "mongoose": "^5.1.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "axios": "^0.18.0",
+    "babel-loader": "^8.0.4",
     "better-scroll": "^1.12.4",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
@@ -25,6 +28,7 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.0.1",
     "vue-loader": "^15.2.4",
     "vue-router": "^3.0.1",

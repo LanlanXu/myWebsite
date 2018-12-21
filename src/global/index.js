@@ -6,7 +6,7 @@ Vue.component('error-msg', {
               <div class="msg" v-if="msgSec">{{msg}}</div>
             </transition>`,
   props: ['msg'],
-  data () {
+  data() {
     return {
       errorDefaultSec: 2, // 报错默认倒计时消失时间
       msgSec: 0, // 显示的控制
@@ -15,11 +15,11 @@ Vue.component('error-msg', {
     }
   },
   methods: {
-    loadErrorMsg () {
+    loadErrorMsg() {
       clearInterval(this.msgTimer)
       this.msgSec = this.errorDefaultSec
       this.errorMsg = this.msg
-      this.msgTimer = setInterval(() =>{
+      this.msgTimer = setInterval(() => {
         if (!this.msgSec) {
           clearInterval(this.msgTimer)
         } else {
@@ -76,15 +76,15 @@ Vue.component('i-input', {
             </div>`,
   props: ['form', 'deleteBoolArr', 'str', 'place', 'addclass', 'inputType'],
   methods: {
-    closeDis (str) {
+    closeDis(str) {
       this.deleteBoolArr[str] = !!this.form[str]
     },
-    closeHid (str) {
+    closeHid(str) {
       setTimeout(() => {
         this.deleteBoolArr[str] = false
       }, 200)
     },
-    deleteCont (str) {
+    deleteCont(str) {
       this.form[str] = ''
       this.deleteBoolArr[str] = false
     }
